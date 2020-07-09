@@ -18,7 +18,19 @@ const tabletwidth = 1025;
 
 $(function () {
 
-// JQueryの範囲
+	$(window).on('scroll load', function () {
+		let scrollPos = $(window).scrollTop();
+		if (scrollPos > 300) {
+			$('header').addClass('active');
+		} else {
+			$('header').removeClass('active');
+		}
+	});
+
+	$('.top02 h2').click(function () {
+		$('.top02 .item').slideToggle();
+		$('.top02 h2 span').toggleClass('active');
+	});
 
 
 

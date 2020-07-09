@@ -8,7 +8,7 @@
 html{
 	color: #000;
 	font-size: 16px;
-	font-family: "ヒラギノ角ゴ ProN W6", "Hiragino Kaku Gothic ProN", "メイリオ", "Meiryo", "verdana", sans-serif;
+	font-family: "ヒラギノ角ゴ ProN", "Hiragino Kaku Gothic ProN", "メイリオ", "Meiryo", "verdana", sans-serif;
 	/*font-family: "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック体", "YuGothic", "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "メイリオ", "Meiryo", "verdana", sans-serif;*/
 	/*font-family: "游明朝", YuMincho, "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN", "HG明朝E", "ＭＳ Ｐ明朝", "ＭＳ 明朝", serif;*/
 	/*font-family: '小塚ゴシック Pro','Kozuka Gothic Pro',sans-serif;*/
@@ -23,6 +23,7 @@ a{
 	max-width: 1920px;
 	margin: 0 auto;
 	height: auto;
+	overflow: hidden;
 }
 section,
 .section{
@@ -34,18 +35,30 @@ section,
 	width: 90%;
 	margin: 0 auto;
 }
+.s_container{
+	width: 70%;
+	margin: 0 auto;
+	max-width: 1080px;
+}
 @media screen and (min-width:1540px) {
-	.container{max-width: 1480px;}
+	html{font-size: 16px;}
+	.container{max-width: 1380px;}
 }
 @media screen and (min-width:1280px) and ( max-width:1539px) {
+	html{font-size: 15px;}
 	.container{max-width: 1280px;}
 }
 @media screen and (min-width:768px) and ( max-width:1279px) {
+	html{font-size: 14px;}
 	.container{max-width: none;}
+	.s_container{
+	width: 80%;
+}
 }
 .is_sp{display: none;}
 .is_tab{display: none;}
 @media screen and (min-width:751px) and ( max-width:1025px) {
+	html{font-size: 13px;}
 	.is_hidden_tab{display: none;}
 	.is_tab{display: block;}
 } 
@@ -79,6 +92,87 @@ section,
 	font-family: 'Inter', sans-serif;
 	font-weight: 900;
 }
+.sub_ttl{
+	font-family: 'Inter', sans-serif;
+	font-weight: 900;
+	font-size: 5rem;
+	letter-spacing: 0.5rem;
+}
+.common_link{ text-align: center; }
+.common_link.left{ text-align: left; }
+.common_link a{
+	font-family: 'Inter', sans-serif ,"ヒラギノ角ゴ ProN", "Hiragino Kaku Gothic ProN", "メイリオ", "Meiryo", "verdana";
+	font-weight: 900;
+	text-align: center;
+	padding: 0.5rem 2.5rem;
+	display: inline-block;
+	letter-spacing: 0.25rem;
+	position: relative;
+	transition: .3s;
+	overflow: hidden;
+}
+.common_link a .link_in{ display: block; }
+.common_link a:hover{ color: #fff; }
+.common_link a::before,
+.common_link a::after,
+.common_link a .link_in::before,
+.common_link a .link_in::after{
+	position: absolute;
+	content: '';
+	background: #000;
+	transition: .3s .2s;
+}
+.common_link a::before,
+.common_link a::after{
+	width: 100%;
+	height: 2px;
+}
+.common_link a::before{
+	top:0;
+	left:0;
+}
+.common_link a::after{
+	bottom:0;
+	right:0;
+}
+.common_link a .link_in::before,
+.common_link a .link_in::after{
+	width: 2px;
+	height: 100%;
+}
+.common_link a .link_in::before{
+	left:0;
+	bottom:0;
+}
+.common_link a .link_in::after{
+	top:0;
+	right:0;
+}
+.common_link a:hover::before,
+.common_link a:hover::after{
+	width: 0;
+	transition: .3s;
+}
+.common_link a:hover .link_in::before,
+.common_link a:hover .link_in::after{
+	height: 0;
+	transition: .3s;
+}
+.common_link a .link_cover{
+	display: block; 
+	width: 100%;
+	height: 100%;
+	background: #fff;
+	position: absolute;
+	top:0;
+	left:-100%;
+	z-index: -2;
+	transition: .5s;
+}
+.common_link a:hover .link_cover{
+	background: #000;
+	left:0;
+}
 /* ▲▲▲▲▲▲▲▲▲▲▲▲▲▲ 共通 ▲▲▲▲▲▲▲▲▲▲▲▲▲▲ */
 
 /* ▼▼▼▼▼▼▼▼▼▼▼▼▼▼ ナビ ▼▼▼▼▼▼▼▼▼▼▼▼▼▼ */
@@ -90,6 +184,9 @@ header{
 	z-index: 55000;
 	transition: .3s;
 }
+header.active{
+	background: rgba(255, 255, 255, 0.8);
+}
 .header_in{
 	display: flex;
 	align-items: flex-start;
@@ -98,20 +195,28 @@ header{
 	max-width: 1920px;
 	margin: 0 auto;
 }
-header .logo{
-	width: 270px;
+header .logo img{
+	height: 5.5rem;
+	width: auto;
+	transition: .3s;
+}
+header.active .logo img{
+	height: 4rem;
 }
 header nav{
 	display: flex;
-	align-items: center;
+	position: relative;
 }
 header nav ul{ display: flex; }
 header nav ul li a{
 	position: relative;
-	padding: 1.25rem 2rem;
-	z-index: 1;
+	padding: 0 1.25rem;
 	overflow: hidden;
-	transition: .3s;
+	transition: .45s;
+	font-weight: bold;
+	display: flex;
+	align-items: center;
+	height: 4rem;
 }
 header nav ul li.red a{
 	color: #e31b13;
@@ -120,11 +225,11 @@ header nav ul li a::before{
 	position: absolute;
 	content: '';
 	top: 50%;
-	left: 50%;
-	transform: translate(-50%,-50%);
+	left: 1.25rem;
+	transform: translate(0,-50%);
 	background: #d6d6d6;
-	width: 1.2rem;
-	height: 1.2rem;
+	width: 1rem;
+	height: 1rem;
 	border-radius: 50%;
 	z-index: -1;
 	transition: .3s;
@@ -132,27 +237,31 @@ header nav ul li a::before{
 header nav ul li a:hover{
 	color: #fff;
 }
+header nav ul li.red a:hover{
+	color: #e31b13;
+}
 header nav ul li a:hover::before{
-	width: 150%;
-	height: 150%;
+	width: 100%;
+	height: 100%;
 	background: #000;
+	left: 50%;
+	border-radius: 0;
+	transform: translate(-50%,-50%);
 }
 header nav .reserved a{
 	position: relative;
-	text-align: center;
-	padding: 1.25rem 2rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 4rem;
+	padding: 0 1.5rem;
 	background: #000;
   color: #fff;
 	letter-spacing: 1.5px;
 	z-index: 2;
 	transition: .3s;
-	display: inline-block;
 }
-header nav .reserved a:hover{
-  background: #d6d6d6;
-  color: #000;
-	
-}
+header nav .reserved a:hover{ color: #000; }
 header nav .reserved a::after{
 	position: absolute;
 	content: '';
@@ -176,31 +285,294 @@ header nav .reserved a:hover::after{
 /* ▲▲▲▲▲▲▲▲▲▲▲▲▲▲ フッター ▲▲▲▲▲▲▲▲▲▲▲▲▲▲ */
 
 /* ▼▼▼▼▼▼▼▼▼▼▼▼▼▼ トップ01 ▼▼▼▼▼▼▼▼▼▼▼▼▼▼ */
-.top01 .mv{
-	position: relative;
-	/* display: flex; */
-}
+.top01 .mv{ display: flex; }
 .top01 .txt{
 	position: relative;
-	padding: 5rem 0 0 8rem;
-	z-index: 2;
-}
-.top01 .img{
-	position: absolute;
-	top: 0;
-	right: 0;
+	padding: 5rem 0 0 5.5rem;
 	width: 50%;
 }
+.top01 .img{	width: 50%;}
+.top01 .img img{ width: 100%; }
 .top01 h2{
-	font-size: 4.6rem;
+	font-size: 5rem;
 	line-height: 1.4;
 }
 .top01 p{
-	font-size: 1.5rem;
+	font-size: 1.3rem;
 	line-height: 2.5;
 	margin-top: 2rem;
+	white-space: nowrap;
+	text-shadow: 1px 1px 5px #fff;
+	font-weight: 900;
 }
 /* ▲▲▲▲▲▲▲▲▲▲▲▲▲▲ トップ01 ▲▲▲▲▲▲▲▲▲▲▲▲▲▲ */
+
+/* ▼▼▼▼▼▼▼▼▼▼▼▼▼▼ トップ02 ▼▼▼▼▼▼▼▼▼▼▼▼▼▼ */
+.top02{ margin: 5rem 0; }
+.top02 .box{
+	padding: 3rem 5rem;
+	background: #f4f4f4;
+}
+.top02 .box h2{
+	font-size: 1.4rem;
+	text-align: center;
+	cursor: pointer;
+	position: relative;
+}
+.top02 .box h2 span{
+	position: absolute;
+	font-size: 1.2rem;
+	top:50%;
+	right:2rem;
+	transform: translate(-50%,-50%);
+	transition: .3s;
+}
+.top02 .box h2 span.active{ transform: translate(-50%,-50%) rotate(-135deg); }
+.top02 .box h3{
+	font-size: 1.2rem;
+	margin:2rem 0 0
+}
+.top02 .box h4{
+	font-size: 1rem;
+	margin: 0 0 0.25rem;
+}
+.top02 .box p{
+	font-size: 0.9rem;
+	margin: 1rem 0;
+}
+.top02 .box ul{
+	margin: 0 0 2rem 1.5rem;
+}
+.top02 .box ul li{
+	list-style: disc;
+	font-size: 0.9rem;
+}
+.top02 .box .item{
+	display: none;
+	padding: 1rem 0 0;
+}
+/* ▲▲▲▲▲▲▲▲▲▲▲▲▲▲ トップ02 ▲▲▲▲▲▲▲▲▲▲▲▲▲▲ */
+
+/* ▼▼▼▼▼▼▼▼▼▼▼▼▼▼ トップ03 ▼▼▼▼▼▼▼▼▼▼▼▼▼▼ */
+.top03{ 
+	margin: 7rem 0 12rem;
+	text-align: right;
+}
+.top03 .box{
+	position: relative;
+	padding: 1rem 0 0;
+}
+.top03 .box .ttl{
+	position: absolute;
+	top:0;
+	left:0;
+	text-align: left;
+}
+.top03 article{
+	width: 65%;
+	display: inline-block;
+	text-align: left;
+	margin-top: 2rem;
+}
+.top03 article:nth-of-type(2){
+	margin-right: 10%;
+}
+.top03 article:nth-of-type(3){
+	margin-right: 20%;
+}
+.top03 article a{
+	border-bottom: 1px solid #000;
+	padding: 1.5rem 2rem;
+	font-size: 0.9rem;
+	position: relative;
+}
+.top03 article a::before{
+	position: absolute;
+	top:0;
+	left:0;
+	content:'';
+	width: 100%;
+	height: 100%;
+	transform: scale(0,1);
+	transform-origin: left center;
+	transition: .45s;
+	background: #fff;
+	z-index: -1;
+}
+.top03 article a:hover::before{
+	transform: scale(1,1);
+	background: #f4f4f4;
+}
+.top03 article a span{
+	display: block;
+	margin-top: 1rem;
+}
+.top03 .bg_img{
+	position: absolute;
+}
+.top03 .bg_img.one{
+	width: 20rem;
+	top:0rem;
+	left:80%;
+	transform:rotate(-45deg);
+}
+.top03 .bg_img.two{
+	top:17rem;
+	left:75%;
+}
+.top03 .bg_img.three{
+	top:28rem;
+	left:25%;
+}
+/* ▲▲▲▲▲▲▲▲▲▲▲▲▲▲ トップ03 ▲▲▲▲▲▲▲▲▲▲▲▲▲▲ */
+
+/* ▼▼▼▼▼▼▼▼▼▼▼▼▼▼ トップ04 ▼▼▼▼▼▼▼▼▼▼▼▼▼▼ */
+.top04 img{
+	width: 100%;
+}
+.top04 .container{
+	position: relative;
+}
+.top04 .box{
+	width: 45%;
+	/* margin-left: auto; */
+	/* margin-top: -15rem; */
+	position: absolute;
+	top:-15rem;
+	right:0;
+}
+.top04 .box h2{
+	color: #fff;
+	line-height: 0.7;
+}
+.top04 .box .item{
+	background: #fff;
+	padding: 3rem 3rem;
+}
+.top04 .box .item p{
+	margin:2rem 0;
+	line-height: 2;
+}
+/* ▲▲▲▲▲▲▲▲▲▲▲▲▲▲ トップ04 ▲▲▲▲▲▲▲▲▲▲▲▲▲▲ */
+
+/* ▼▼▼▼▼▼▼▼▼▼▼▼▼▼ トップ05 ▼▼▼▼▼▼▼▼▼▼▼▼▼▼ */
+.top05{ margin: 5rem 0;}
+.top05 h2{
+	color: #e2e2e2;
+	line-height: 0.7;
+}
+.top05 .img{
+	width: 55%;
+	position: relative;
+}
+.top05 .img img{
+	width: 100%;
+}
+.top05 .img p{
+	position: absolute;
+	bottom:-8rem;
+	left:0;
+	font-size: 7.5rem;
+	letter-spacing: 0.5rem;
+	color: #e2e2e2;
+}
+.top05 .txt{
+	width: 65%;
+	margin-left: auto;
+	margin-top: -10rem;
+	position: relative;
+	background: #fff;
+	padding: 3rem;
+}
+.top05 .txt h3{
+	font-size: 1.35rem;
+	margin: 0 0 1rem;
+}
+.top05 .txt p{
+	line-height: 2;
+}
+.top05 .movie_box{
+	margin: 7rem 0 5rem;
+	display: flex;
+	justify-content: space-between;
+}
+.top05 .movie_box iframe{
+	width: 31.5%;
+	height: 250px;
+}
+/* ▲▲▲▲▲▲▲▲▲▲▲▲▲▲ トップ05 ▲▲▲▲▲▲▲▲▲▲▲▲▲▲ */
+
+/* ▼▼▼▼▼▼▼▼▼▼▼▼▼▼ トップ06 ▼▼▼▼▼▼▼▼▼▼▼▼▼▼ */
+.top06 h2{
+	text-align:center;
+	font-size: 3.5rem;
+}
+.top06 .box{
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+}
+.top06 .box .img{
+	width: 31.5%;
+	margin: 2rem 0 4rem;
+}
+.top06 .box .img img{
+	width: 100%;
+}
+.top06 .box .img p{
+	font-size: 0.9rem;
+	margin: 0.5rem 0 0;
+	text-align: center;
+}
+/* ▲▲▲▲▲▲▲▲▲▲▲▲▲▲ トップ06 ▲▲▲▲▲▲▲▲▲▲▲▲▲▲ */
+
+/* ▼▼▼▼▼▼▼▼▼▼▼▼▼▼ トップ07 ▼▼▼▼▼▼▼▼▼▼▼▼▼▼ */
+.top07{
+	margin: 5rem 0;
+}
+.top07 h2{
+	text-align: center;
+}
+.top07 .box{
+	margin: 2rem 0 3rem;
+	display: flex;
+	justify-content: space-around;
+}
+.top07 .box article{
+	width: 45%;
+}
+.top07 .box article a{
+	padding: 3rem;
+	height: 100%;
+	overflow: hidden;
+	transition: .3s;
+}
+.top07 .box article:nth-of-type(1) a{
+	background: url(../images/top/top07_01.jpg) center / cover no-repeat;
+}
+.top07 .box article:nth-of-type(2) a{
+	background: url(../images/top/top07_02.jpg) center / cover no-repeat;
+}
+.top07 .box article a .item{
+	background: rgba(0, 0, 0, 0.5);
+	padding: 3rem 2rem;
+	height: 100%;
+	color:  #fff;
+	transition: .3s;
+}
+.top07 .box article a:hover{
+	padding: 0;
+}
+.top07 .box article a:hover .item{
+		padding: 6rem 5rem;
+}
+.top07 .box article a .item p{
+	margin: 1.5rem 0;
+}
+.top07 .common_link a{
+	padding: 0.5rem 5rem;
+}
+/* ▲▲▲▲▲▲▲▲▲▲▲▲▲▲ トップ07 ▲▲▲▲▲▲▲▲▲▲▲▲▲▲ */
 
 /* ▼▼▼▼▼▼▼▼▼▼▼▼▼▼ 下層共通 ▼▼▼▼▼▼▼▼▼▼▼▼▼▼ */
  
