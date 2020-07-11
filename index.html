@@ -16,7 +16,7 @@
 	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;900&display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="css/swiper.min.css">
 	<script defer src="js/all.min.js"></script>
-	<script defer src="js/swiper.min.js"></script>
+	<!-- <script defer src="js/swiper.min.js"></script> -->
 	<!--[if lt IE 9]>
 	<script type="text/javascript" src="js/selectivizr-min.js" defer></script>
 	<script type="text/javascript" src="js/html5shiv.min.js" defer></script>
@@ -179,7 +179,11 @@
 
 			<!-- ▼▼▼▼▼▼▼▼▼▼▼▼▼▼ トップ04 ▼▼▼▼▼▼▼▼▼▼▼▼▼▼ -->
 			<section class="top04">
-				<img src="./images/top/top04_bg.png">
+				<picture>
+					<source srcset="/images/top/top04_bg.png" media="(min-width: 768px)">
+					<source srcset="/images/top/top04_bg02.png" media="(max-width: 767px)">
+					<img src="./images/top/top04_bg.png">
+				</picture>
 				<div class="container">
 					<div class="box">
 						<h2 class="sub_ttl">CONCEPT</h2>
@@ -252,21 +256,6 @@
 						</div>
 					</div>
 
-					<!-- <script>
-						window.onload = function () {
-							var mySwiper = new Swiper('.top05 .swiper-container', {
-								effect: 'fade',
-								loop: true,
-								slidesPerView: 1,
-								autoplay: {
-									delay: 6000,
-								},
-								slideActiveClass: 'active',
-								speed: 1500,
-								simulateTouch: false,
-							});
-						}
-					</script> -->
 
 					<div class="movie_box">
 						<iframe src="https://www.youtube.com/embed/PAHqNo1m2iw" frameborder="0"
@@ -292,25 +281,49 @@
 					<h2 class="sub_ttl">ROOMS</h2>
 					<div class="box">
 						<div class="img">
-							<img src="./images/top/top06_01.png">
-							<p>トレーニングルーム1</p>
+							<div class="mask_wrap">
+								<div class="mask">
+									<img src="./images/top/top06_01.png">
+								</div>
+							</div>
+							<p class="is_pc">トレーニングルーム1</p>
 						</div>
 						<div class="img">
-							<img src="./images/top/top06_02.png">
-							<p>トレーニングルーム2</p>
+							<div class="mask_wrap">
+								<div class="mask">
+									<img src="./images/top/top06_02.png">
+								</div>
+							</div>
+							<p class="is_pc">トレーニングルーム2</p>
 						</div>
 						<div class="img">
-							<img src="./images/top/top06_03.png">
-							<p>フィッティングルーム</p>
+							<div class="mask_wrap">
+								<div class="mask">
+									<img src="./images/top/top06_03.png">
+								</div>
+							</div>
+							<p class="is_pc">フィッティングルーム</p>
 						</div>
 						<div class="img">
-							<img src="./images/top/top06_04.png">
+							<div class="mask_wrap">
+								<div class="mask">
+									<img src="./images/top/top06_04.png">
+								</div>
+							</div>
 						</div>
 						<div class="img">
-							<img src="./images/top/top06_05.png">
+							<div class="mask_wrap">
+								<div class="mask">
+									<img src="./images/top/top06_05.png">
+								</div>
+							</div>
 						</div>
 						<div class="img">
-							<img src="./images/top/top06_06.png">
+							<div class="mask_wrap">
+								<div class="mask">
+									<img src="./images/top/top06_06.png">
+								</div>
+							</div>
 						</div>
 					</div>
 				</div>
@@ -326,7 +339,7 @@
 							<div class="item">
 								<p>Sさま</p>
 								<p>ここにパーソナルトレーニングのキャッチコピーが入ります。</p>
-								<p>
+								<p class="is_pc">
 									ここにパーソナルトレーニングの感想が入ります。ここにパーソナルトレーニングの感想が入ります。ここにパーソナルトレーニングの感想が入ります。ここにパーソナルトレーニングの感想が入ります。ここにパーソナルトレーニングの感想が入ります。ここにパーソナルトレーニングの感想が入ります。ここにパーソナルトレーニングの感想が入ります。
 								</p>
 							</div>
@@ -338,7 +351,7 @@
 							<div class="item">
 								<p>Sさま</p>
 								<p>ここにパーソナルトレーニングのキャッチコピーが入ります。</p>
-								<p>
+								<p class="is_pc">
 									ここにパーソナルトレーニングの感想が入ります。ここにパーソナルトレーニングの感想が入ります。ここにパーソナルトレーニングの感想が入ります。ここにパーソナルトレーニングの感想が入ります。ここにパーソナルトレ
 								</p>
 							</div>
@@ -370,8 +383,8 @@
 									</div>
 
 									<div class="txt">
+										<p class="number">01</p>
 										<div class="inner">
-											<p class="number">01</p>
 											<h3>田中 直樹</h3>
 											<p>パーソナルトレーナー</p>
 											<h4>ダイエットはもちろん、筋力アップ、食事指導まで行わせて頂きます。</h4>
@@ -388,8 +401,8 @@
 									</div>
 
 									<div class="txt">
+										<p class="number">02</p>
 										<div class="inner">
-											<p class="number">02</p>
 											<h3>柴田 雄一郎</h3>
 											<p>パーソナルトレーナー</p>
 											<h4>【心も身体も健康に】を軸に、お客様に笑顔をお届けするポジティブトレーナーです。</h4>
@@ -414,7 +427,7 @@
 
 			<script>
 				window.onload = function () {
-						var mySwiper = new Swiper('.top05 .swiper-container', {
+					var mySwiper = new Swiper('.top05 .swiper-container', {
 						effect: 'fade',
 						loop: true,
 						slidesPerView: 1,
@@ -425,7 +438,7 @@
 						speed: 1500,
 						simulateTouch: false,
 					});
-					
+
 					var mySwiper02 = new Swiper('.top08 .swiper-container', {
 						effect: 'fade',
 						loop: true,
@@ -579,6 +592,7 @@
 	<script type="text/javascript" src="./js/jquery-3.2.1.min.js" defer></script>
 	<script src="./js/ofi.min.js" defer></script>
 	<script src="./js/picturefill.min.js" defer></script>
+	<script defer src="js/swiper.min.js"></script>
 	<script type="text/javascript" src="./js/myscript.js" defer></script>
 </body>
 

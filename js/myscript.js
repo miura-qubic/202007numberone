@@ -21,7 +21,7 @@ $(function () {
 	$(window).on('scroll load', function () {
 		let scrollPos = $(window).scrollTop();
 		if (scrollPos > 300) {
-			$('header').addClass('active').css('transition','.3s');
+			$('header').addClass('active').css('transition', '.3s');
 		} else {
 			$('header').removeClass('active');
 		}
@@ -32,6 +32,15 @@ $(function () {
 			var windowHeight = $(window).height();
 			if (scroll > position - windowHeight + 200) {
 				$(this).addClass('active');
+			}
+		});
+
+		$('.mask').each(function () {
+			let $item = $(this);
+			let top = $item.offset().top; // ターゲットの位置取得
+			let position = top - $(window).height();  // イベントを発火させたい位置
+			if ($(window).scrollTop() > position) {
+				$item.addClass('is_view');
 			}
 		});
 
