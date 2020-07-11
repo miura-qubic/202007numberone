@@ -2,21 +2,20 @@
 /* ▼▼▼▼▼▼▼▼▼▼▼▼▼▼ ベース設定 ▼▼▼▼▼▼▼▼▼▼▼▼▼▼ */
 body{-webkit-text-size-adjust: 100%;}
 html{
-	color: ;
-	font-size: ;
-	line-height: ;
-	/*font-family: "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "メイリオ", "Meiryo", "verdana", sans-serif;*/
-	/*font-family: "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック体", "YuGothic", "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "メイリオ", "Meiryo", "verdana", sans-serif;*/
-	/*font-family: "游明朝", YuMincho, "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN", "HG明朝E", "ＭＳ Ｐ明朝", "ＭＳ 明朝", serif;*/
-	/*font-family: '小塚ゴシック Pro','Kozuka Gothic Pro',sans-serif;*/
+	color: #000;
+	font-size: 14px;
+	font-family: "ヒラギノ角ゴ ProN", "Hiragino Kaku Gothic ProN", "メイリオ", "Meiryo", "verdana", sans-serif;
+	line-height: 1.8;
 	-webkit-text-size-adjust: 100%;
 }
 a{
-	color: ;
+	color: #000;
+	display: block;
 }
 #wrapper{
 	width: 100%;
 	height: 100%;
+	overflow: hidden;
 }
 section,
 .section{
@@ -24,6 +23,7 @@ section,
 	height: auto;
 	position: relative;
 }
+.s_container,
 .container{
 	width: 100%;
 	max-width: 650px;
@@ -58,34 +58,133 @@ section,
 /* ▲▲▲▲▲▲▲▲▲▲▲▲▲▲ ベース設定 ▲▲▲▲▲▲▲▲▲▲▲▲▲▲ */
 
 /* ▼▼▼▼▼▼▼▼▼▼▼▼▼▼ 共通 ▼▼▼▼▼▼▼▼▼▼▼▼▼▼ */
- 
+main{
+	padding-top:4rem;
+}
+.inter{
+	font-family: 'Inter', sans-serif;
+	font-weight: 900;
+}
 /* ▲▲▲▲▲▲▲▲▲▲▲▲▲▲ 共通 ▲▲▲▲▲▲▲▲▲▲▲▲▲▲ */
 
 /* ▼▼▼▼▼▼▼▼▼▼▼▼▼▼ ナビ ▼▼▼▼▼▼▼▼▼▼▼▼▼▼ */
+header{
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	z-index: 55000;
+	/* transform: translate(0,-102%); */
+	height: 4rem;
+	background: rgba(255, 255, 255, 0.8);
+}
+header .logo img{
+	height: 4rem;
+	width: auto;
+}
+.header_in{
+	display: flex;
+	justify-content: space-between;
+	width: 100%;
+}
+
+
+header nav{	
+	position: absolute;
+	top:0;
+	left:100%;
+}
+
+
+
+header .h_cta{
+	display: flex;
+	margin: 0 auto;
+}
+header .h_cta a{
+	text-align: center;
+	font-size: 1.5rem;
+	width: 4.5rem;
+	line-height: 1.7;
+}
+header .h_cta a p{
+	font-size: 0.8rem;
+}
 .menu_open{
-	width: 3rem;
+	width: 4rem;
 	position: relative;
 }
 .menu_open span{
 	position: absolute;
-	top:50%;
+	top:40%;
 	left:50%;
-	background: #fff;
-	width: 40%;
-	height: 2px;
+	background: #000;
+	width: 50%;
+	height: 3px;
 	transition: .3s;
 }
-.menu_open span:nth-of-type(1){transform:translate(-50%,-50%) translateY(5px);}
+.menu_open span:nth-of-type(1){transform:translate(-50%,-50%) translateY(7px);}
 .menu_open span:nth-of-type(2){transform:translate(-50%,-50%);}
-.menu_open span:nth-of-type(3){transform:translate(-50%,-50%) translateY(-5px);}
+.menu_open span:nth-of-type(3){transform:translate(-50%,-50%) translateY(-7px);}
 .menu_open.active span:nth-of-type(1){transform:translate(-50%,-50%) rotate(45deg);}
 .menu_open.active span:nth-of-type(2){opacity: 0;}
 .menu_open.active span:nth-of-type(3){transform:translate(-50%,-50%) rotate(-45deg);}
+.menu_open p{
+	text-align: center;
+	font-size: 0.8rem;
+	margin-top: 2.8rem;
+	line-height: 1;
+}
 /* ▲▲▲▲▲▲▲▲▲▲▲▲▲▲ ナビ ▲▲▲▲▲▲▲▲▲▲▲▲▲▲ */
 
 /* ▼▼▼▼▼▼▼▼▼▼▼▼▼▼ フッター ▼▼▼▼▼▼▼▼▼▼▼▼▼▼ */
  
 /* ▲▲▲▲▲▲▲▲▲▲▲▲▲▲ フッター ▲▲▲▲▲▲▲▲▲▲▲▲▲▲ */
+
+/* ▼▼▼▼▼▼▼▼▼▼▼▼▼▼ トップ01 ▼▼▼▼▼▼▼▼▼▼▼▼▼▼ */
+.top01 .txt{
+	position: relative;
+	padding: 1rem 1.5rem 0.5rem;
+	color: #fff;
+	color: #000;
+	transition: .3s 2s;
+	z-index: 550;
+}
+.top01 h2{
+	font-size: 4rem;
+	line-height: 1.4;
+	text-shadow: 1px 1px 5px #fff;
+}
+.top01 p{
+	font-size: 1.4rem;
+	line-height: 2.2;
+	margin-top: 2.5rem;
+	font-weight: bold;
+	/* padding:0 1rem; */
+}
+.top01 .img{
+		width: 110%;
+		height: 420px;
+		position: absolute;
+		top:0;
+		left:4rem;
+		z-index: 500;
+		/* opacity: 0; */
+		transition: .1s 2s;
+}
+/* ▲▲▲▲▲▲▲▲▲▲▲▲▲▲ トップ01 ▲▲▲▲▲▲▲▲▲▲▲▲▲▲ */
+
+/* ▼▼▼▼▼▼▼▼▼▼▼▼▼▼ 下層共通 ▼▼▼▼▼▼▼▼▼▼▼▼▼▼ */
+ 
+/* ▲▲▲▲▲▲▲▲▲▲▲▲▲▲ 下層共通 ▲▲▲▲▲▲▲▲▲▲▲▲▲▲ */
+
+/* ▼▼▼▼▼▼▼▼▼▼▼▼▼▼ 下層共通 ▼▼▼▼▼▼▼▼▼▼▼▼▼▼ */
+ 
+/* ▲▲▲▲▲▲▲▲▲▲▲▲▲▲ 下層共通 ▲▲▲▲▲▲▲▲▲▲▲▲▲▲ */
+
+/* ▼▼▼▼▼▼▼▼▼▼▼▼▼▼ 下層共通 ▼▼▼▼▼▼▼▼▼▼▼▼▼▼ */
+ 
+/* ▲▲▲▲▲▲▲▲▲▲▲▲▲▲ 下層共通 ▲▲▲▲▲▲▲▲▲▲▲▲▲▲ */
 
 /* ▼▼▼▼▼▼▼▼▼▼▼▼▼▼ 下層共通 ▼▼▼▼▼▼▼▼▼▼▼▼▼▼ */
  
