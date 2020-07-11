@@ -14,7 +14,9 @@
 		media="screen and (min-width: 769px) and (max-width: 1025px)">
 	<link rel="stylesheet" type="text/css" href="css/smart.css" media="screen and (max-width: 767px)">
 	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;900&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="css/swiper.min.css">
 	<script defer src="js/all.min.js"></script>
+	<script defer src="js/swiper.min.js"></script>
 	<!--[if lt IE 9]>
 	<script type="text/javascript" src="js/selectivizr-min.js" defer></script>
 	<script type="text/javascript" src="js/html5shiv.min.js" defer></script>
@@ -43,7 +45,7 @@
 				</nav>
 				<!-- ▼▼▼▼▼▼▼▼▼▼▼▼▼▼ PCナビ ▼▼▼▼▼▼▼▼▼▼▼▼▼▼ -->
 				<!-- ▲▲▲▲▲▲▲▲▲▲▲▲▲▲ PCナビ ▲▲▲▲▲▲▲▲▲▲▲▲▲▲ -->
-				
+
 				<!-- ▼▼▼▼▼▼▼▼▼▼▼▼▼▼ SPナビ ▼▼▼▼▼▼▼▼▼▼▼▼▼▼ -->
 				<!-- ▲▲▲▲▲▲▲▲▲▲▲▲▲▲ SPナビ ▲▲▲▲▲▲▲▲▲▲▲▲▲▲ -->
 				<div class="is_sp h_cta">
@@ -57,14 +59,14 @@
 						<p class="inter">RESERVED</p>
 					</a>
 				</div>
-				
+
 				<div class="menu_open is_tab" id="menu_open">
 					<span></span>
 					<span></span>
 					<span></span>
 					<p class="inter">MENU</p>
 				</div>
-				
+
 			</div>
 		</header>
 		<main>
@@ -135,8 +137,10 @@
 			<!-- ▲▲▲▲▲▲▲▲▲▲▲▲▲▲ トップ02 ▲▲▲▲▲▲▲▲▲▲▲▲▲▲ -->
 
 			<!-- ▼▼▼▼▼▼▼▼▼▼▼▼▼▼ トップ03 ▼▼▼▼▼▼▼▼▼▼▼▼▼▼ -->
-			<section class="top03 fadein">
-				<img src="./images/top/bg01.png" class="bg_img one">
+			<section class="top03 action">
+				<div class="bg_img one">
+					<img src="./images/top/bg01.png">
+				</div>
 				<img src="./images/top/bg02.png" class="bg_img two">
 				<img src="./images/top/bg03.png" class="bg_img three">
 				<div class="s_container">
@@ -193,19 +197,76 @@
 			<section class="top05">
 				<div class="container">
 					<h2 class="sub_ttl">TRAINING</h2>
-					<div class="box">
+					<div class="swiper-container">
+						<div class="swiper-wrapper">
+							<div class="swiper-slide">
+								<div class="img">
+									<img src="./images/top/top05_02.png">
+									<p class="number inter">01</p>
+								</div>
+								<div class="txt">
+									<h3>美脚・美尻コース</h3>
+									<p>
+										実績のあるトレーナーのマンツーマン指導&お食事アドバイス！あなたのライフスタイルに合わせてご提案可能◎<br>実績のあるパーソナルトレーナーが、無理のないメニューを構成し、理想のボディラインをつくりあげます！
+									</p>
+								</div>
+							</div>
 
-						<div class="img">
-							<img src="./images/top/top05_01.png">
-							<p class="number inter">01</p>
-						</div>
-						<div class="txt">
-							<h3>美脚・美尻コース</h3>
-							<p>
-								実績のあるトレーナーのマンツーマン指導&お食事アドバイス！あなたのライフスタイルに合わせてご提案可能◎<br>実績のあるパーソナルトレーナーが、無理のないメニューを構成し、理想のボディラインをつくりあげます！
-							</p>
+							<div class="swiper-slide">
+								<div class="img">
+									<img src="./images/top/top05_03.png">
+									<p class="number inter">02</p>
+								</div>
+								<div class="txt">
+									<h3>ダイエットコース</h3>
+									<p>
+										ダイエットが楽しくできるよう、実績のあるトレーナーがあなたのライフスタイルに合わせたメニューをご提案をします。二人三脚でダイエットが成功できるように指導させて頂きます。
+									</p>
+								</div>
+							</div>
+
+							<div class="swiper-slide">
+								<div class="img">
+									<img src="./images/top/top05_04.png">
+									<p class="number inter">03</p>
+								</div>
+								<div class="txt">
+									<h3>短期集中コース</h3>
+									<p>できるだけ早く痩せたい方におすすめできる内容です。今から継続的なトレーニングで理想の体型に！受賞経験のあるプロが教えるから痩せるのは当たり前です。</p>
+								</div>
+							</div>
+
+							<div class="swiper-slide">
+								<div class="img">
+									<img src="./images/top/top05_05.png">
+									<p class="number inter">04</p>
+								</div>
+								<div class="txt">
+									<h3>オーダーコース</h3>
+									<p>
+										当ジムでは、お客様一人一人のご要望に応じた最適な」メニューをご提案しています。ダイエットをしたい方や、綺麗で健康的な体になりたい方、アスリートの方など様々です。あなたの理想が達成できるようサポートさせて頂きます。
+									</p>
+								</div>
+							</div>
+
 						</div>
 					</div>
+
+					<!-- <script>
+						window.onload = function () {
+							var mySwiper = new Swiper('.top05 .swiper-container', {
+								effect: 'fade',
+								loop: true,
+								slidesPerView: 1,
+								autoplay: {
+									delay: 6000,
+								},
+								slideActiveClass: 'active',
+								speed: 1500,
+								simulateTouch: false,
+							});
+						}
+					</script> -->
 
 					<div class="movie_box">
 						<iframe src="https://www.youtube.com/embed/PAHqNo1m2iw" frameborder="0"
@@ -295,34 +356,89 @@
 			<!-- ▲▲▲▲▲▲▲▲▲▲▲▲▲▲ トップ07 ▲▲▲▲▲▲▲▲▲▲▲▲▲▲ -->
 
 			<!-- ▼▼▼▼▼▼▼▼▼▼▼▼▼▼ トップ08 ▼▼▼▼▼▼▼▼▼▼▼▼▼▼ -->
-			<section class="top08">
+			<section class="top08 fadein">
 				<img src="./images/top/bg04.png" class="bg_img four">
 				<img src="./images/top/bg05.png" class="bg_img five">
 				<div class="container">
 					<h2 class="sub_ttl">TRAINER</h2>
-					<div class="box">
-						<div class="img">
-							<img src="./images/top/top08_01.png">
-						</div>
+					<div class="swiper-container">
+						<div class="swiper-wrapper">
+							<div class="swiper-slide">
+								<div class="box">
+									<div class="img">
+										<img src="./images/top/top08_01.png">
+									</div>
 
-						<div class="txt">
-							<div class="inner">
-								<h3>田中 直樹</h3>
-								<p>パーソナルトレーナー</p>
-								<h4>ダイエットはもちろん、筋力アップ、食事指導まで行わせて頂きます。</h4>
-								<p>サンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプル</p>
+									<div class="txt">
+										<div class="inner">
+											<p class="number">01</p>
+											<h3>田中 直樹</h3>
+											<p>パーソナルトレーナー</p>
+											<h4>ダイエットはもちろん、筋力アップ、食事指導まで行わせて頂きます。</h4>
+											<p>サンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプル</p>
+										</div>
+									</div>
+
+								</div>
 							</div>
-							<div class="common_link">
-								<a href="#">
-									<span class="link_cover"></span>
-									<span class="link_in">VIEW MORE</span>
-								</a>
+							<div class="swiper-slide">
+								<div class="box">
+									<div class="img">
+										<img src="./images/top/top08_01.png">
+									</div>
+
+									<div class="txt">
+										<div class="inner">
+											<p class="number">02</p>
+											<h3>柴田 雄一郎</h3>
+											<p>パーソナルトレーナー</p>
+											<h4>【心も身体も健康に】を軸に、お客様に笑顔をお届けするポジティブトレーナーです。</h4>
+											<p>サンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプル</p>
+										</div>
+
+									</div>
+
+								</div>
 							</div>
 						</div>
-
+						<div class="common_link">
+							<a href="#">
+								<span class="link_cover"></span>
+								<span class="link_in">VIEW MORE</span>
+							</a>
+						</div>
 					</div>
+
 				</div>
 			</section>
+
+			<script>
+				window.onload = function () {
+						var mySwiper = new Swiper('.top05 .swiper-container', {
+						effect: 'fade',
+						loop: true,
+						slidesPerView: 1,
+						autoplay: {
+							delay: 6000,
+						},
+						slideActiveClass: 'active',
+						speed: 1500,
+						simulateTouch: false,
+					});
+					
+					var mySwiper02 = new Swiper('.top08 .swiper-container', {
+						effect: 'fade',
+						loop: true,
+						slidesPerView: 1,
+						autoplay: {
+							delay: 6000,
+						},
+						slideActiveClass: 'active',
+						speed: 1500,
+						simulateTouch: false,
+					});
+				}
+			</script>
 			<!-- ▲▲▲▲▲▲▲▲▲▲▲▲▲▲ トップ08 ▲▲▲▲▲▲▲▲▲▲▲▲▲▲ -->
 
 			<!-- ▼▼▼▼▼▼▼▼▼▼▼▼▼▼ トップ09 ▼▼▼▼▼▼▼▼▼▼▼▼▼▼ -->
@@ -433,7 +549,8 @@
 					<a href="#" target="_blank"><span><i class="fab fa-facebook-f"></i></span></a>
 					<a href="#" target="_blank"><span><i class="fab fa-instagram"></i></span></a>
 					<a href="#" target="_blank"><span><i class="fab fa-youtube"></i></span></a>
-					<a href="https://beauty.hotpepper.jp/kr/slnH000494164/" target="_blank"><span><img src="./images/common/hot_logo.png"></span></a>
+					<a href="https://beauty.hotpepper.jp/kr/slnH000494164/" target="_blank"><span><img
+								src="./images/common/hot_logo.png"></span></a>
 				</div>
 				<p class="center"><a href="#">プライバシーポリシー</a></p>
 			</div>
@@ -450,13 +567,14 @@
 			<a href="#" target="_blank"><span><i class="fab fa-facebook-f"></i></span></a>
 			<a href="#" target="_blank"><span><i class="fab fa-instagram"></i></span></a>
 			<a href="#" target="_blank"><span><i class="fab fa-youtube"></i></span></a>
-			<a href="https://beauty.hotpepper.jp/kr/slnH000494164/" target="_blank"><span><img src="./images/common/hot_logo.png"></span></a>
+			<a href="https://beauty.hotpepper.jp/kr/slnH000494164/" target="_blank"><span><img
+						src="./images/common/hot_logo.png"></span></a>
 
 
 			<p class="inter">050-3703-5666</p>
 			<span><i class="fas fa-mobile"></i></span>
 		</aside>
-		
+
 	</div>
 	<script type="text/javascript" src="./js/jquery-3.2.1.min.js" defer></script>
 	<script src="./js/ofi.min.js" defer></script>

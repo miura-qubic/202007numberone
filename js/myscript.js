@@ -26,7 +26,7 @@ $(function () {
 			$('header').removeClass('active');
 		}
 
-		$('.fadein').each(function () {
+		$('.fadein, .action').each(function () {
 			var position = $(this).offset().top;
 			var scroll = $(window).scrollTop();
 			var windowHeight = $(window).height();

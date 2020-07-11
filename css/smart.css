@@ -174,9 +174,51 @@ header .h_cta a p{
 }
 /* ▲▲▲▲▲▲▲▲▲▲▲▲▲▲ トップ01 ▲▲▲▲▲▲▲▲▲▲▲▲▲▲ */
 
-/* ▼▼▼▼▼▼▼▼▼▼▼▼▼▼ 下層共通 ▼▼▼▼▼▼▼▼▼▼▼▼▼▼ */
- 
-/* ▲▲▲▲▲▲▲▲▲▲▲▲▲▲ 下層共通 ▲▲▲▲▲▲▲▲▲▲▲▲▲▲ */
+/* ▼▼▼▼▼▼▼▼▼▼▼▼▼▼ トップ02 ▼▼▼▼▼▼▼▼▼▼▼▼▼▼ */
+.top02{ margin: 3rem 0; }
+.top02 .box{
+	padding: 1rem;
+	background: #f4f4f4;
+}
+.top02 .box h2{
+	font-size: 1.2rem;
+	text-align: center;
+	cursor: pointer;
+	position: relative;
+}
+.top02 .box h2 span{
+	position: absolute;
+	font-size: 1rem;
+	top:50%;
+	right:0;
+	transform: translate(0,-50%);
+	transition: .3s;
+}
+.top02 .box h2 span.active{ transform: translate(-50%,-50%) rotate(-135deg); }
+.top02 .box h3{
+	font-size: 1.2rem;
+	margin:2rem 0 0
+}
+.top02 .box h4{
+	font-size: 1rem;
+	margin: 0 0 0.25rem;
+}
+.top02 .box p{
+	font-size: 0.9rem;
+	margin: 1rem 0;
+}
+.top02 .box ul{
+	margin: 0 0 2rem 1.5rem;
+}
+.top02 .box ul li{
+	list-style: disc;
+	font-size: 0.9rem;
+}
+.top02 .box .item{
+	display: none;
+	padding: 1rem 0 0;
+}
+/* ▲▲▲▲▲▲▲▲▲▲▲▲▲▲ トップ02 ▲▲▲▲▲▲▲▲▲▲▲▲▲▲ */
 
 /* ▼▼▼▼▼▼▼▼▼▼▼▼▼▼ 下層共通 ▼▼▼▼▼▼▼▼▼▼▼▼▼▼ */
  
