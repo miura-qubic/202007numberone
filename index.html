@@ -9,9 +9,10 @@
 	<!-- <link rel="shortcut icon" href="<?php echo get_template_directory_uri(); ?>/img/favicon.ico" /> -->
 	<!-- <link rel="apple-touch-icon" href="<?php echo get_template_directory_uri(); ?>/img/favicon.ico"" /> -->
 	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="stylesheet" href="css/slick.css">
 	<link rel="stylesheet" type="text/css" href="css/desktop.css" media="screen and (min-width: 768px)">
 	<link rel="stylesheet" type="text/css" href="css/tab.css"
-		media="screen and (min-width: 769px) and (max-width: 1025px)">
+		media="screen and (min-width: 768px) and (max-width: 1025px)">
 	<link rel="stylesheet" type="text/css" href="css/smart.css" media="screen and (max-width: 767px)">
 	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;900&display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="css/swiper.min.css">
@@ -23,7 +24,7 @@
 	<![endif]-->
 </head>
 
-<body>
+<body class="preload">
 	<div id="wrapper">
 		<header class="is_hide">
 			<div class="header_in">
@@ -41,6 +42,22 @@
 						<li><a href="./column.html">コラム</a></li>
 						<li class="red"><a href="./exp.html">体験トレーニング</a></li>
 					</ul>
+					<div class="f_sns is_tab">
+						<a href="#" target="_blank"><span><i class="fab fa-twitter"></i></span></a>
+						<a href="#" target="_blank"><span><i class="fab fa-facebook-f"></i></span></a>
+						<a href="#" target="_blank"><span><i class="fab fa-instagram"></i></span></a>
+						<a href="#" target="_blank"><span><i class="fab fa-youtube"></i></span></a>
+						<a href="https://beauty.hotpepper.jp/kr/slnH000494164/" target="_blank"><span><img
+									src="./images/common/hot_logo.png"></span></a>
+					</div>
+					<a href="tel:05037035666" class="f_tel is_tab">
+						<span class="txt01"><i class="fas fa-mobile"></i></span>
+						<span class="txt02">
+							<span class="txt03">１０:００~２２:００ (日・祝以外)</span>
+							<span class="txt04 inter">050-3703-5666</span>
+						</span>
+
+					</a>
 					<div class="reserved inter"><a href="./contact.html">RESERVED</a></div>
 				</nav>
 				<!-- ▼▼▼▼▼▼▼▼▼▼▼▼▼▼ PCナビ ▼▼▼▼▼▼▼▼▼▼▼▼▼▼ -->
@@ -180,8 +197,8 @@
 			<!-- ▼▼▼▼▼▼▼▼▼▼▼▼▼▼ トップ04 ▼▼▼▼▼▼▼▼▼▼▼▼▼▼ -->
 			<section class="top04">
 				<picture>
-					<source srcset="/images/top/top04_bg.png" media="(min-width: 768px)">
-					<source srcset="/images/top/top04_bg02.png" media="(max-width: 767px)">
+					<source srcset="./images/top/top04_bg.png" media="(min-width: 768px)">
+					<source srcset="./images/top/top04_bg02.png" media="(max-width: 767px)">
 					<img src="./images/top/top04_bg.png">
 				</picture>
 				<div class="container">
@@ -201,7 +218,69 @@
 			<section class="top05">
 				<div class="container">
 					<h2 class="sub_ttl">TRAINING</h2>
-					<div class="swiper-container">
+
+					<div class="slick01">
+
+
+						<div class="box">
+							<div class="img">
+								<img src="./images/top/top05_02.png">
+								<p class="number inter">01</p>
+							</div>
+							<div class="txt">
+								<h3>美脚・美尻コース</h3>
+								<p>
+									実績のあるトレーナーのマンツーマン指導&お食事アドバイス！あなたのライフスタイルに合わせてご提案可能◎<br>実績のあるパーソナルトレーナーが、無理のないメニューを構成し、理想のボディラインをつくりあげます！
+								</p>
+							</div>
+						</div>
+
+						<div class="box">
+							<div class="img">
+								<img src="./images/top/top05_03.png">
+								<p class="number inter">02</p>
+							</div>
+							<div class="txt">
+								<h3>ダイエットコース</h3>
+								<p>
+									ダイエットが楽しくできるよう、実績のあるトレーナーがあなたのライフスタイルに合わせたメニューをご提案をします。二人三脚でダイエットが成功できるように指導させて頂きます。
+								</p>
+							</div>
+						</div>
+
+						<div class="box">
+							<div class="img">
+								<img src="./images/top/top05_04.png">
+								<p class="number inter">03</p>
+							</div>
+							<div class="txt">
+								<h3>短期集中コース</h3>
+								<p>できるだけ早く痩せたい方におすすめできる内容です。今から継続的なトレーニングで理想の体型に！受賞経験のあるプロが教えるから痩せるのは当たり前です。</p>
+							</div>
+						</div>
+
+						<div class="box">
+							<div class="img">
+								<img src="./images/top/top05_05.png">
+								<p class="number inter">04</p>
+							</div>
+							<div class="txt">
+								<h3>オーダーコース</h3>
+								<p>
+									当ジムでは、お客様一人一人のご要望に応じた最適な」メニューをご提案しています。ダイエットをしたい方や、綺麗で健康的な体になりたい方、アスリートの方など様々です。あなたの理想が達成できるようサポートさせて頂きます。
+								</p>
+							</div>
+						</div>
+
+					</div>
+
+
+					<!-- <script>
+						$('.slick01').slick();
+					</script> -->
+
+
+					<!-- <div class="swiper-container">
 						<div class="swiper-wrapper">
 							<div class="swiper-slide">
 								<div class="img">
@@ -254,7 +333,7 @@
 							</div>
 
 						</div>
-					</div>
+					</div> -->
 
 
 					<div class="movie_box">
@@ -374,43 +453,71 @@
 				<img src="./images/top/bg05.png" class="bg_img five">
 				<div class="container">
 					<h2 class="sub_ttl">TRAINER</h2>
-					<div class="swiper-container">
-						<div class="swiper-wrapper">
-							<div class="swiper-slide">
-								<div class="box">
-									<div class="img">
-										<img src="./images/top/top08_01.png">
+					<div class="top08_in">
+						<div class="slick02">
+							<div class="box">
+								<div class="img">
+									<img src="./images/top/top08_01.png">
+								</div>
+
+								<div class="txt">
+									<p class="number">01</p>
+									<div class="inner">
+										<h3>田中 直樹</h3>
+										<p>パーソナルトレーナー</p>
+										<h4>ダイエットはもちろん、筋力アップ、食事指導まで行わせて頂きます。</h4>
+										<p>サンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプル</p>
+									</div>
+								</div>
+							</div>
+							<div class="box">
+								<div class="img">
+									<img src="./images/top/top08_02.png">
+								</div>
+
+								<div class="txt">
+									<p class="number">02</p>
+									<div class="inner">
+										<h3>柴田 雄一郎</h3>
+										<p>パーソナルトレーナー</p>
+										<h4>【心も身体も健康に】を軸に、お客様に笑顔をお届けするポジティブトレーナーです。</h4>
+										<p>サンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプル</p>
 									</div>
 
-									<div class="txt">
-										<p class="number">01</p>
-										<div class="inner">
-											<h3>田中 直樹</h3>
-											<p>パーソナルトレーナー</p>
-											<h4>ダイエットはもちろん、筋力アップ、食事指導まで行わせて頂きます。</h4>
-											<p>サンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプル</p>
-										</div>
-									</div>
 
 								</div>
 							</div>
-							<div class="swiper-slide">
-								<div class="box">
-									<div class="img">
-										<img src="./images/top/top08_01.png">
+
+							<div class="box">
+								<div class="img">
+									<img src="./images/top/top08_01.png">
+								</div>
+							
+								<div class="txt">
+									<p class="number">01</p>
+									<div class="inner">
+										<h3>田中 直樹</h3>
+										<p>パーソナルトレーナー</p>
+										<h4>ダイエットはもちろん、筋力アップ、食事指導まで行わせて頂きます。</h4>
+										<p>サンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプル</p>
 									</div>
-
-									<div class="txt">
-										<p class="number">02</p>
-										<div class="inner">
-											<h3>柴田 雄一郎</h3>
-											<p>パーソナルトレーナー</p>
-											<h4>【心も身体も健康に】を軸に、お客様に笑顔をお届けするポジティブトレーナーです。</h4>
-											<p>サンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプル</p>
-										</div>
-
+								</div>
+							</div>
+							<div class="box">
+								<div class="img">
+									<img src="./images/top/top08_02.png">
+								</div>
+							
+								<div class="txt">
+									<p class="number">02</p>
+									<div class="inner">
+										<h3>柴田 雄一郎</h3>
+										<p>パーソナルトレーナー</p>
+										<h4>【心も身体も健康に】を軸に、お客様に笑顔をお届けするポジティブトレーナーです。</h4>
+										<p>サンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプル</p>
 									</div>
-
+							
+							
 								</div>
 							</div>
 						</div>
@@ -421,37 +528,9 @@
 							</a>
 						</div>
 					</div>
-
 				</div>
 			</section>
 
-			<script>
-				window.onload = function () {
-					var mySwiper = new Swiper('.top05 .swiper-container', {
-						effect: 'fade',
-						loop: true,
-						slidesPerView: 1,
-						autoplay: {
-							delay: 6000,
-						},
-						slideActiveClass: 'active',
-						speed: 1500,
-						simulateTouch: false,
-					});
-
-					var mySwiper02 = new Swiper('.top08 .swiper-container', {
-						effect: 'fade',
-						loop: true,
-						slidesPerView: 1,
-						autoplay: {
-							delay: 6000,
-						},
-						slideActiveClass: 'active',
-						speed: 1500,
-						simulateTouch: false,
-					});
-				}
-			</script>
 			<!-- ▲▲▲▲▲▲▲▲▲▲▲▲▲▲ トップ08 ▲▲▲▲▲▲▲▲▲▲▲▲▲▲ -->
 
 			<!-- ▼▼▼▼▼▼▼▼▼▼▼▼▼▼ トップ09 ▼▼▼▼▼▼▼▼▼▼▼▼▼▼ -->
@@ -543,7 +622,7 @@
 						<h3 class="inter">ACCESS</h3>
 						<div class="inner">
 
-							<p>〒730-0805 広島県広島市中区十日市町2丁目5-18</p>
+							<p>〒730-0805 <br class="is_sp">広島県広島市中区十日市町2丁目5-18 TR十日市ビル2階</p>
 							<div class="common_link">
 								<a href="https://goo.gl/maps/mdWmwG5RtHaXBAsM7" target="_blank">
 									<span class="link_cover"></span>
@@ -552,7 +631,15 @@
 							</div>
 						</div>
 						<p class="is_pc inter f_tel">TEL:050-3703-5666</p>
-						<p>営業時間10:00~22:00 （日・祝以外）</p>
+						<p class="is_pc">営業時間10:00~22:00 （日・祝以外）</p>
+						<a href="tel:05037035666" class="f_tel is_sp">
+							<span class="txt01"><i class="fas fa-mobile"></i></span>
+							<span class="txt02">
+								<span class="txt03">１０:００~２２:００ (日・祝以外)</span>
+								<span class="txt04 inter">050-3703-5666</span>
+							</span>
+
+						</a>
 					</div>
 
 					<a href="#" class="inter f_contact">RESERVED</a>
@@ -592,7 +679,8 @@
 	<script type="text/javascript" src="./js/jquery-3.2.1.min.js" defer></script>
 	<script src="./js/ofi.min.js" defer></script>
 	<script src="./js/picturefill.min.js" defer></script>
-	<script defer src="js/swiper.min.js"></script>
+	<script type="text/javascript" src="js/swiper.min.js" defer></script>
+	<script type="text/javascript" src="js/slick.min.js" defer></script>
 	<script type="text/javascript" src="./js/myscript.js" defer></script>
 </body>
 

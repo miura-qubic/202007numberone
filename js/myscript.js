@@ -18,6 +18,42 @@ const tabletwidth = 1025;
 
 $(function () {
 
+	$("body").removeClass("preload");
+	
+	$('.slick01').slick({
+		autoplay: true,
+		arrows: false,
+		autoplaySpeed: 6000,
+		speed: 1500,
+		draggable:false,
+		swipe: false,
+		fade: true,
+	});
+
+	$('.slick02').slick({
+		autoplay: true,
+		arrows: false,
+		autoplaySpeed: 6000,
+		speed: 1500,
+		draggable: false,
+		swipe: false,
+		fade: true,
+	});
+
+	$('.slick01').on('beforeChange', function () {
+		$('.slick01 .slick-slide').removeClass('is-prev');
+		$('.slick01 .slick-slide').removeClass('is-next');
+		$('.slick01 .slick-slide.slick-active').addClass('is-prev');
+		$('.slick01 .slick-slide.slick-active').next('.slick-slide').addClass('is-next');
+	});
+
+	$('.slick02').on('beforeChange', function () {
+		$('.slick02 .slick-slide').removeClass('is-prev');
+		$('.slick02 .slick-slide').removeClass('is-next');
+		$('.slick02 .slick-slide.slick-active').addClass('is-prev');
+		$('.slick02 .slick-slide.slick-active').next('.slick-slide').addClass('is-next');
+	});
+
 	$(window).on('scroll load', function () {
 		let scrollPos = $(window).scrollTop();
 		if (scrollPos > 300) {
@@ -32,6 +68,19 @@ $(function () {
 			var windowHeight = $(window).height();
 			if (scroll > position - windowHeight + 200) {
 				$(this).addClass('active');
+			}
+		});
+
+		$('.action').each(function () {
+			var position = $(this).offset().top;
+			var scroll = $(window).scrollTop();
+			var windowHeight = $(window).height();
+			if (scroll > position - windowHeight) {
+				$('.bg_img.one').css({ 'transform': 'translateY(' + - scroll / 8 + 'px)', });
+				$('.bg_img.two').css({ 'transform': 'translateY(' + - scroll / 4 + 'px)', });
+				$('.bg_img.three').css({ 'transform': 'translateY(' + - scroll / 5 + 'px)', });
+				$('.bg_img.four').css({ 'transform': 'translateY(' + - scroll / 5 + 'px)', });
+				$('.bg_img.five').css({ 'transform': 'translateY(' + - scroll / 3 + 'px)', });
 			}
 		});
 

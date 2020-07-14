@@ -1,0 +1,137 @@
+
+header nav{	
+  position: absolute;
+  display: block;
+	top:4rem;
+	transform: translateX(100%);
+	left:0;
+	background: #fff;
+	width: 100%;
+	padding:2rem 0;
+	transition: .3s;
+}
+header nav.active{
+	transform: translateX(0);
+}
+header nav ul{ 
+	display: flex; 
+	flex-wrap: wrap;
+}
+header nav ul li:nth-of-type(1),
+header nav ul li.red{
+	width: 100%;
+}
+header nav ul li{
+	width: 50%;
+}
+header nav ul li a{
+	text-align: center;
+	font-weight: bold;
+  padding:0.5rem;
+  display: block;
+}
+header nav ul li a::before{
+  content: none;
+}
+ header nav ul li.red a{
+	 background: #000;
+	 color: #fff;
+	 padding:1rem;
+	 margin-top: 1rem;
+ }
+header nav a.f_tel{
+	margin:2rem;
+}
+header nav .reserved a{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 4rem;
+	padding: 0 1.5rem;
+	background: #000;
+	color: #fff;
+	margin:0 2rem;
+	font-size: 1.5rem;
+	letter-spacing: 1.5px;
+}
+header .f_sns{
+	display: flex;
+	justify-content: space-around;
+	padding: 1.5rem 0;
+	background: #e0e0e0;
+
+}
+header .f_sns a{
+	width: 2.5rem;
+	height: 2.5rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 1.5rem;
+}
+header .f_sns a img{
+	width: 1.5rem;
+	display: block;
+}
+header a.f_tel{
+	line-height: 1.2;
+	margin-top: 2rem;
+  display: flex;
+  justify-content: center;
+	align-items: center;
+	padding: 1.5rem 1rem;
+	background: #fff;
+	border: 2px solid#000;
+}
+header a.f_tel .txt01{
+	/* width: 15%; */
+  font-size: 4rem;
+  padding-right: 2rem;
+}
+/* header a.f_tel .txt02{ width: 85%; } */
+header a.f_tel .txt03{
+	display: block;
+	font-weight: bold;
+}
+header a.f_tel .txt04{
+	display: block;
+	font-size: 1.8rem;
+	margin-top: 1rem;
+}
+
+
+
+.menu_open{
+	width: 4rem;
+	position: relative;
+}
+.menu_open span{
+	position: absolute;
+	top:40%;
+	left:50%;
+	background: #000;
+	width: 50%;
+	height: 3px;
+	transition: .3s;
+}
+.menu_open span:nth-of-type(1){transform:translate(-50%,-50%) translateY(7px);}
+.menu_open span:nth-of-type(2){transform:translate(-50%,-50%);}
+.menu_open span:nth-of-type(3){transform:translate(-50%,-50%) translateY(-7px);}
+.menu_open.active span:nth-of-type(1){transform:translate(-50%,-50%) rotate(45deg);}
+.menu_open.active span:nth-of-type(2){opacity: 0;}
+.menu_open.active span:nth-of-type(3){transform:translate(-50%,-50%) rotate(-45deg);}
+.menu_open p{
+	text-align: center;
+	font-size: 0.8rem;
+	margin-top: 2.8rem;
+	line-height: 1;
+}
+
+
+
+.top09_in{
+  height: 50rem;
+}
+aside{
+  width: 2.5rem;
+}
