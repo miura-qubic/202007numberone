@@ -97,7 +97,7 @@ $(function () {
 	});
 
 	$(window).on('load', function () {
-		$('aside,.top01,header').addClass('is_show');
+		$('aside,.top01,header,.lower_mv').addClass('is_show');
 	});
 
 	$('.top02 h2').click(function () {
