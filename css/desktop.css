@@ -1016,7 +1016,8 @@ transform:translateY(0);
 
 /* ▼▼▼▼▼▼▼▼▼▼▼▼▼▼ 共通CTA ▼▼▼▼▼▼▼▼▼▼▼▼▼▼ */
 .bottom_cta{
-	margin: 6rem 0;
+	margin: 6rem 0 0;
+	padding: 0 0 6rem;
 }
 .bottom_cta .exp_link a{
 	width: 80%;
@@ -1313,3 +1314,22 @@ transform: translateY(0);
 	text-align: center;
 }
 /* ▲▲▲▲▲▲▲▲▲▲▲▲▲▲ サービス04 ▲▲▲▲▲▲▲▲▲▲▲▲▲▲ */
+
+/* ▼▼▼▼▼▼▼▼▼▼▼▼▼▼ トレーナー01 ▼▼▼▼▼▼▼▼▼▼▼▼▼▼ */
+.trainer_bg{
+	background: #efefef;
+}
+.trainer01{
+	background: #efefef;
+	margin: -5rem 0 -6rem;
+}
+.trainer01_in{
+	padding: 0 0 5rem;
+}
+.trainer01_in .img{
+	width: 35%;
+}
+.trainer01_in .img img{
+	width: 100%;
+}
+/* ▲▲▲▲▲▲▲▲▲▲▲▲▲▲ トレーナー01 ▲▲▲▲▲▲▲▲▲▲▲▲▲▲ */
