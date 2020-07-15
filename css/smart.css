@@ -70,6 +70,10 @@ main{
 	font-size: 4rem;
 	letter-spacing: 0.25rem;
 }
+.sub_ttl.lower{
+	opacity: .5;
+	font-style: italic;
+}
 .common_link a{
 	font-family: 'Inter', sans-serif ,"ヒラギノ角ゴ ProN", "Hiragino Kaku Gothic ProN", "メイリオ", "Meiryo", "verdana";
 	font-weight: 900;
@@ -824,8 +828,234 @@ transform:translateY(0);
 /* ▲▲▲▲▲▲▲▲▲▲▲▲▲▲ 共通CTA ▲▲▲▲▲▲▲▲▲▲▲▲▲▲ */
 
 /* ▼▼▼▼▼▼▼▼▼▼▼▼▼▼ 下層共通 ▼▼▼▼▼▼▼▼▼▼▼▼▼▼ */
- 
+ .lower_mv{
+	margin: 0 0 4rem;
+}
+.lower_mv .img{
+	overflow: hidden;
+	z-index: 500;
+	position: relative;
+	width: 130%;
+}
+.lower_mv .img::before{
+	width: 100%;
+	height: 100%;
+	content: '';
+	background: #000;
+	position: absolute;
+	display: block;
+	top:0;
+	right:0;
+	transform:scale(0,1);
+	transform-origin: left center;
+	transition: .5s transform, .5s width 1.5s;
+	z-index: 520;
+}
+.lower_mv.is_show .img::before{
+	transform:scale(1,1);
+	width: 0;
+}
+.lower_mv .img img{
+		width: 100%; 
+		opacity: 0;
+	 transform: scale(1.1);
+	 transition: 1s transform 1.5s,.1s opacity 1.5s;
+}
+.lower_mv.is_show .img img{
+	opacity: 1;
+	transform: scale(1);
+}
+.lower_mv .box{
+	position: relative;
+	z-index: 560;
+	margin-top: -2rem;
+}
+.lower_mv h1{
+	opacity: .75;
+	font-family: 'Inter', sans-serif;
+	font-weight: 900;
+	font-size: 2.5rem;
+	text-align: center;
+	line-height: 0.75;
+	color: #fff;
+	transition: .3s 1.5s;
+}
+.lower_mv.is_show h1{
+	color: #000;
+}
+.lower_mv .box .item{
+	padding: 2rem 0 0;
+	transform: translateY(100px);
+	opacity: 0;
+	transition: 1s 1.5s;
+}
+.lower_mv.is_show .box .item{
+transform: translateY(0);
+	opacity: 1;
+}
+.lower_mv .box .item h2{
+	font-size: 1.5rem;
+	text-align: center;
+	margin:0 0 1rem;
+}
+.lower_mv .box .item p{
+	line-height: 2.3;
+}
 /* ▲▲▲▲▲▲▲▲▲▲▲▲▲▲ 下層共通 ▲▲▲▲▲▲▲▲▲▲▲▲▲▲ */
+
+/* ▼▼▼▼▼▼▼▼▼▼▼▼▼▼ サービス01 ▼▼▼▼▼▼▼▼▼▼▼▼▼▼ */
+.service01_in .box{
+	margin: 3rem 0 4rem;
+}
+.service01_in .box .img{
+	margin: 0 -2rem;
+}
+.service01_in .box .txt{
+	margin: -3rem 0 0;
+	background: #fff;
+	position: relative;
+	padding: 1rem 0.5rem 2rem;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	border-bottom:3px solid #000;
+}
+.service01_in .box .txt h3{
+	order: 2;
+	margin:1rem 0 2rem;
+	font-size: 1.5rem;
+}
+.service01_in .box .txt h4{
+	order: 1;
+	text-align: center;
+	font-size: 1.1rem;
+}
+.service01_in .box .txt p{order: 3;}
+/* ▲▲▲▲▲▲▲▲▲▲▲▲▲▲ サービス01 ▲▲▲▲▲▲▲▲▲▲▲▲▲▲ */
+
+/* ▼▼▼▼▼▼▼▼▼▼▼▼▼▼ サービス02 ▼▼▼▼▼▼▼▼▼▼▼▼▼▼ */
+.service02{
+	margin: 5rem 0 7rem;
+	padding: 16rem 0;
+	font-size: 1.3rem;
+	text-align: center;
+	font-weight: bold;
+	font-style: italic;
+	background-image: url(../images/service/service02_01.png),url(../images/service/service02_02.png),url(../images/service/service02_03.png),url(../images/service/service02_04.png);
+	background-repeat: no-repeat;
+	background-position: left top, right top 3rem, left bottom, right bottom 6rem;
+	background-size: 50% auto, 50% auto,60% auto, 40% auto;
+}
+/* ▲▲▲▲▲▲▲▲▲▲▲▲▲▲ サービス02 ▲▲▲▲▲▲▲▲▲▲▲▲▲▲ */
+
+/* ▼▼▼▼▼▼▼▼▼▼▼▼▼▼ サービス03 ▼▼▼▼▼▼▼▼▼▼▼▼▼▼ */
+.service03{ margin: 4rem 0; }
+.service03 h2{
+	 line-height: 0.7; 
+	 transform: translateX(-2rem);
+}
+.service03 .box{
+}
+.service03 .box table{
+	text-align: center;
+	width: 100%;
+	margin-bottom: 0.5rem;
+}
+.service03 .box table.fixed{ table-layout: fixed; }
+.service03 .box table + table{ margin-top: 3rem; }
+.service03 .box table th,
+.service03 .box table td{
+	border:2px solid #d0d0d0;
+	padding: 1rem 0.25rem;
+	font-size: 0.9rem;
+}
+.service03 .box table th{
+	font-weight: normal;
+	background: #d0d0d0;
+}
+.service03 .box table td img{
+	vertical-align: middle;
+}
+.service03 .box table td strong{
+	font-size: 1.5rem;
+	margin-top: 1rem;
+}
+.service03 .box ul{ margin-left: 1.5rem; }
+.service03 .box ul li{ list-style: disc; }
+/* ▲▲▲▲▲▲▲▲▲▲▲▲▲▲ サービス03 ▲▲▲▲▲▲▲▲▲▲▲▲▲▲ */
+
+/* ▼▼▼▼▼▼▼▼▼▼▼▼▼▼ サービス04 ▼▼▼▼▼▼▼▼▼▼▼▼▼▼ */
+.service04{
+	margin:4rem 0 3rem;
+}
+.service04 .box{
+	margin-top: -3.3rem;
+	margin-left: auto;
+	position: relative;
+}
+.service04 .box h2{
+	text-align: center;
+	background:#cccccc;
+	font-size: 1.3rem;
+	line-height: 1;
+	padding:1rem 0.5rem;
+}
+.service04 .table_box{
+		width: 100%;
+		overflow-x: scroll;
+		padding-bottom: 1rem;
+}
+.service04 .table_box .row{
+	position: relative;
+	padding: 0 0.5rem 0 6rem;
+	display: flex;
+	width: 450%;
+	margin:1.5rem 0 0;
+}
+.service04 .table_box .row.first{
+	font-weight: bold;
+}
+.service04 .table_box .row h3{
+	font-size: 1.1rem;
+	position: absolute;
+	left:0;
+	background: #efefef;
+	top:0;
+	width: 6rem;
+	height: 100%;
+	text-align: center;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.service04 .table_box .row h3 img{
+	height: 2rem;
+}
+.service04 .table_box .row .wrap{
+	display: flex;
+	width: 100%;
+	background: #efefef;
+	padding:1rem 0.5rem;
+}
+.service04 .table_box .row .item{
+	width: 100%;
+	text-align: center;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.service04 .box .inner p{
+	margin:1rem 0;
+}
+.service04 .box .inner p.small{
+	text-align: center;
+	font-size: 0.8rem;
+}
+/* ▲▲▲▲▲▲▲▲▲▲▲▲▲▲ サービス04 ▲▲▲▲▲▲▲▲▲▲▲▲▲▲ */
+
+
+
+
 
 @media screen and (orientation:portrait) {/* 縦向き */}
 @media screen and (orientation:landscape) {/* 横向き */}

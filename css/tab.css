@@ -84,11 +84,9 @@ header a.f_tel{
 	border: 2px solid#000;
 }
 header a.f_tel .txt01{
-	/* width: 15%; */
   font-size: 4rem;
   padding-right: 2rem;
 }
-/* header a.f_tel .txt02{ width: 85%; } */
 header a.f_tel .txt03{
 	display: block;
 	font-weight: bold;
@@ -134,4 +132,18 @@ header a.f_tel .txt04{
 }
 aside{
   width: 2.5rem;
+}
+
+.lower_mv h1{ 
+	font-size: 3.5rem;
+}
+
+.service01_in .box .txt{
+	width: 90%;
+}
+.service03 .box{
+	width: 90%;
+}
+.service04 .box{
+	width: 90%;
 }
