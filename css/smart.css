@@ -59,6 +59,7 @@ section,
 /* ▼▼▼▼▼▼▼▼▼▼▼▼▼▼ 共通 ▼▼▼▼▼▼▼▼▼▼▼▼▼▼ */
 main{
 	padding-top:4rem;
+	position: relative;
 }
 .inter{
 	font-family: 'Inter', sans-serif;
@@ -901,6 +902,40 @@ transform: translateY(0);
 .lower_mv .box .item p{
 	line-height: 2.3;
 }
+.bg_img.sixth{
+	width: 10rem;
+	top:110%;
+	left:70%;
+		z-index: -1;
+}
+.bg_img.sixth img{
+	transform:rotate(-45deg);
+	width: 100%;
+}
+.bg_img.seventh{
+	width: 5rem;
+	top:80%;
+	right:10%;
+		z-index: -1;
+}
+.bg_img.eighth{
+	width: 5rem;
+	top:80%;
+	left:3%;
+		z-index: -1;
+}
+.bg_img.nineth{
+	width: 5rem;
+	top:58%;
+	right:0%;
+		z-index: -1;
+}
+.bg_img.tenth{
+	width: 5rem;
+	top:58%;
+	left:10%;
+		z-index: -1;
+}
 /* ▲▲▲▲▲▲▲▲▲▲▲▲▲▲ 下層共通 ▲▲▲▲▲▲▲▲▲▲▲▲▲▲ */
 
 /* ▼▼▼▼▼▼▼▼▼▼▼▼▼▼ サービス01 ▼▼▼▼▼▼▼▼▼▼▼▼▼▼ */
@@ -1007,14 +1042,13 @@ transform: translateY(0);
 }
 .service04 .table_box .row{
 	position: relative;
-	padding: 0 0.5rem 0 6rem;
+	padding: 0 0 0 6rem;
 	display: flex;
 	width: 450%;
-	margin:1.5rem 0 0;
+	margin:1rem 0 0;
 }
-.service04 .table_box .row.first{
-	font-weight: bold;
-}
+.service04 .table_box .row.first{ font-weight: bold; }
+.service04 .table_box .row.last{ border: 3px solid #000; }
 .service04 .table_box .row h3{
 	font-size: 1.1rem;
 	position: absolute;
@@ -1035,14 +1069,16 @@ transform: translateY(0);
 	display: flex;
 	width: 100%;
 	background: #efefef;
-	padding:1rem 0.5rem;
+	padding:0.75rem 0.5rem;
 }
 .service04 .table_box .row .item{
+	padding: 0 0.25rem;
 	width: 100%;
 	text-align: center;
 	display: flex;
 	align-items: center;
 	justify-content: center;
+	font-size: 0.9rem;
 }
 .service04 .box .inner p{
 	margin:1rem 0;
@@ -1051,6 +1087,7 @@ transform: translateY(0);
 	text-align: center;
 	font-size: 0.8rem;
 }
+
 /* ▲▲▲▲▲▲▲▲▲▲▲▲▲▲ サービス04 ▲▲▲▲▲▲▲▲▲▲▲▲▲▲ */
 
 

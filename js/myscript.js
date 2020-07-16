@@ -84,6 +84,19 @@ $(function () {
 			}
 		});
 
+		$('main').each(function () {
+			var position = $(this).offset().top;
+			var scroll = $(window).scrollTop();
+			var windowHeight = $(window).height();
+			if (scroll > position - windowHeight) {
+				$('.bg_img.sixth').css({ 'transform': 'translateY(' + - scroll / 2 + 'px)', });
+				$('.bg_img.seventh').css({ 'transform': 'translateY(' + - scroll / 4 + 'px)', });
+				$('.bg_img.eighth').css({ 'transform': 'translateY(' + - scroll / 5 + 'px)', });
+				$('.bg_img.nineth').css({ 'transform': 'translateY(' + - scroll / 5 + 'px)', });
+				$('.bg_img.tenth').css({ 'transform': 'translateY(' + - scroll / 3 + 'px)', });
+			}
+		});
+
 		$('.mask').each(function () {
 			let $item = $(this);
 			let top = $item.offset().top; // ターゲットの位置取得
