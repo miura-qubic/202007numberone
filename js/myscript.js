@@ -28,6 +28,9 @@ $(function () {
 		draggable:false,
 		swipe: false,
 		fade: true,
+		pauseOnFocus: false,
+		pauseOnHover: false,
+		pauseOnDotsHover: false
 	});
 
 	$('.slick02').slick({
@@ -38,6 +41,23 @@ $(function () {
 		draggable: false,
 		swipe: false,
 		fade: true,
+		pauseOnFocus: false,
+		pauseOnHover: false,
+		pauseOnDotsHover: false
+	});
+
+	$('.slick03').slick({
+		autoplay: true,
+		arrows: false,
+		draggable: false,
+		swipe: false,
+		autoplaySpeed: 0,
+		cssEase: 'linear',
+		speed: 8000,
+		slidesToShow: 7,
+		pauseOnFocus: false,
+		pauseOnHover: false,
+		pauseOnDotsHover: false
 	});
 
 	$('.slick01').on('beforeChange', function () {
