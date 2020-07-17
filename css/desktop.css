@@ -1373,7 +1373,7 @@ transform: translateY(0);
 	background: #fff;
 	width: 80%;
 	margin:-20rem 0 0 auto;
-	padding: 5rem 5rem 5rem 20%;
+	padding: 5rem 0 5rem 20%;
 	position: relative;
 }
 .trainer01_in .txt::before{
@@ -1415,8 +1415,11 @@ transform: translateY(0);
 	font-weight: normal;
 	text-align: left;
 }
+.trainer01_in .txt table th{
+	white-space: nowrap;
+}
 .trainer01_in .txt table td{
-	padding: 1rem 2rem;
+	padding: 1rem 1rem;
 }
 .trainer01_in .trainer_sns{
 	display: flex;

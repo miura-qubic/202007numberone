@@ -54,10 +54,24 @@ $(function () {
 		autoplaySpeed: 0,
 		cssEase: 'linear',
 		speed: 8000,
-		slidesToShow: 7,
+		slidesToShow: 6,
 		pauseOnFocus: false,
 		pauseOnHover: false,
-		pauseOnDotsHover: false
+		pauseOnDotsHover: false,
+		responsive: [
+			{
+				breakpoint: 1024,
+				settings: {
+					slidesToShow: 4,
+				}
+			},
+			{
+				breakpoint: 767,
+				settings: {
+					slidesToShow: 3,
+				}
+			},
+		]
 	});
 
 	$('.slick01').on('beforeChange', function () {
