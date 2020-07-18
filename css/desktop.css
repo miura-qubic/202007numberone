@@ -811,6 +811,7 @@ transform:translateY(0);
 	padding: 3rem;
 	height: 100%;
 	overflow: hidden;
+	position: relative;
 	transition: .3s;
 }
 .top07 .box article:nth-of-type(1) a{ background: url(../images/top/top07_01.jpg) center / cover no-repeat; }
@@ -824,7 +825,31 @@ transform:translateY(0);
 }
 .top07 .box article a:hover{ padding: 0; }
 .top07 .box article a:hover .item{ padding: 6rem 5rem; }
-.top07 .box article a .item p{ margin: 1.5rem 0; }
+.top07 .box article a .item p{ 
+	margin: 1.5rem 0;
+	transition: .3s .1s;
+ }
+ .top07 .box article a:hover .item p{
+	transition: .3s;
+	opacity: 0;
+	transform: translate(0,-50px);
+}
+.top07 .box article a .link_text{
+	background: #fff;
+	text-align: center;
+	padding: 0.5rem 3rem;
+	position: absolute;
+	top:50%;
+	left:50%;
+	transition: .3s;
+	transform: translate(-50%,-20%);
+	opacity: 0;
+}
+.top07 .box article a:hover .link_text{
+	transition: .3s .1s;
+	opacity: 1;
+	transform: translate(-50%,-50%);
+} 
 .top07 .common_link a{ padding: 0.5rem 5rem; }
 /* ▲▲▲▲▲▲▲▲▲▲▲▲▲▲ トップ07 ▲▲▲▲▲▲▲▲▲▲▲▲▲▲ */
 
@@ -1438,3 +1463,83 @@ transform: translateY(0);
 	height: 20rem;
 }
 /* ▲▲▲▲▲▲▲▲▲▲▲▲▲▲ トレーナー01 ▲▲▲▲▲▲▲▲▲▲▲▲▲▲ */
+
+/* ▼▼▼▼▼▼▼▼▼▼▼▼▼▼ ボイス01 ▼▼▼▼▼▼▼▼▼▼▼▼▼▼ */
+.voice01{ margin: 0 0 10rem; }
+.voice01 .box{
+	display: flex;
+	justify-content: space-around;
+	flex-wrap: wrap;
+}
+.voice01 .box article{ width: 45%; margin:0 0 3rem}
+.voice01 .box article a{
+	padding: 3rem;
+	height: 100%;
+	overflow: hidden;
+	transition: .3s;
+	position: relative;
+}
+.voice01 .box article:nth-of-type(1) a{ background: url(../images/top/top07_01.jpg) center / cover no-repeat; }
+.voice01 .box article:nth-of-type(3) a{ background: url(../images/top/top07_01.jpg) center / cover no-repeat; }
+.voice01 .box article:nth-of-type(2) a{ background: url(../images/top/top07_02.jpg) center / cover no-repeat; }
+.voice01 .box article:nth-of-type(4) a{ background: url(../images/top/top07_02.jpg) center / cover no-repeat; }
+.voice01 .box article a .item{
+	background: rgba(0, 0, 0, 0.5);
+	padding: 3rem 2rem;
+	height: 100%;
+	color:  #fff;
+	transition: .3s;
+}
+.voice01 .box article a:hover{ padding: 0; }
+.voice01 .box article a:hover .item{ padding: 6rem 5rem; }
+.voice01 .box article a .item p{ 
+	margin: 1.5rem 0; 
+transition: .3s .1s;
+}
+.voice01 .box article a:hover .item p{
+	transition: .3s;
+	opacity: 0;
+	transform: translate(0,-50px);
+}
+.voice01 .box article a .link_text{
+	background: #fff;
+	text-align: center;
+	padding: 0.5rem 3rem;
+	position: absolute;
+	top:50%;
+	left:50%;
+	transition: .3s;
+	transform: translate(-50%,-20%);
+	opacity: 0;
+}
+.voice01 .box article a:hover .link_text{
+	transition: .3s .1s;
+	opacity: 1;
+	transform: translate(-50%,-50%);
+} 
+.pagenaition{
+	width: 100%;
+	margin: 3rem 0 0;
+}
+.pagenaition ul{
+	display: flex;
+	justify-content: center;
+}
+.pagenaition ul li{
+	margin: 0 2rem;
+}
+.pagenaition ul li > *{
+	width: 3rem;
+	height: 3rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border:2px solid #000;
+	transition: .3s;
+}
+.pagenaition ul li a:hover,
+.pagenaition ul li span{
+	background: #000;
+	color: #fff;
+}
+/* ▲▲▲▲▲▲▲▲▲▲▲▲▲▲ ボイス01 ▲▲▲▲▲▲▲▲▲▲▲▲▲▲ */
