@@ -1205,6 +1205,35 @@ transform: translateY(0);
 	left:10%;
 	z-index: -1;
 }
+.lower_mv .mv_tel{
+	font-size: 3rem;
+}
+.lower_mv .hot_link a {
+    width: 100%;
+    max-width: 560px;
+    margin: 0 auto;
+    text-align: center;
+    border: 0.35rem solid #ae2d5b;
+    padding: 1rem;
+    transition: .3s;
+}
+.lower_mv .hot_link a:hover{
+		border: 0.6rem solid #ae2d5b;
+	padding:0.75rem;
+}
+.lower_mv .hot_link a img{
+	width: 10rem;
+	transition: .3s;
+}
+.lower_mv .hot_link a:hover img{
+	opacity: 0.6;
+}
+.lower_mv .hot_link p{
+	text-align: center;
+	color: #ae2d5b;
+	font-size: 0.9rem;
+	margin: 0.5rem 0 0;
+}
 /* ▲▲▲▲▲▲▲▲▲▲▲▲▲▲ 下層共通 ▲▲▲▲▲▲▲▲▲▲▲▲▲▲ */
 
 /* ▼▼▼▼▼▼▼▼▼▼▼▼▼▼ サービス01 ▼▼▼▼▼▼▼▼▼▼▼▼▼▼ */
@@ -1787,3 +1816,56 @@ font-size: 1.6rem;
 	margin:01rem 0;
 }
 /* ▲▲▲▲▲▲▲▲▲▲▲▲▲▲ exp01 ▲▲▲▲▲▲▲▲▲▲▲▲▲▲ */
+
+/* ▼▼▼▼▼▼▼▼▼▼▼▼▼▼ contact01 ▼▼▼▼▼▼▼▼▼▼▼▼▼▼ */
+.contact01{
+	margin:0 0 8rem;
+}
+.contact01 .box{
+	width: 80%;
+	margin: 0 auto;
+}
+.contact01 .box .item{
+	display: flex;
+	margin: 3rem 0;
+}
+.contact01 .box .inner{
+	width: 22%;
+	padding:1rem 0;
+}
+.contact01 .box .input_box{
+	width: 78%;
+	display: flex;
+}
+.contact01 .box .input_box .half{
+	width: 50%;
+}
+.contact01 .box .input_box select,
+.contact01 .box .input_box textarea,
+.contact01 .box .input_box input{
+	width: 100%;
+	border: 2px solid #efefef;
+	padding:1rem;
+	font-size: 16px;
+}
+.contact01 .box .input_box .half input{
+	width: 80%;
+}
+.contact01 .box .submit_box{
+	width: 200px;
+	margin: 3rem auto 0;
+}
+.contact01 .box .submit_box input{
+	border: 3px solid #000;
+	width: 100%;
+	background: #fff;
+	padding:0.5rem 1rem;
+	cursor: pointer;
+	transition: .3s;
+	font-weight: bold;
+}
+.contact01 .box .submit_box:hover input{
+	background: #000;
+	color: #fff;
+}
+/* ▲▲▲▲▲▲▲▲▲▲▲▲▲▲ contact01 ▲▲▲▲▲▲▲▲▲▲▲▲▲▲ */
