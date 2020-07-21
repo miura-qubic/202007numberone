@@ -152,6 +152,11 @@ $(function () {
 		$('.top02 h2 span').toggleClass('active');
 	});
 
+	$('.faq01 h3').click(function () {
+		$(this).parents('.ques').siblings('.ans').slideToggle();
+		$(this).siblings('span').toggleClass('active');
+	});
+
 
 
 

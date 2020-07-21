@@ -12,7 +12,7 @@ html{
 	line-height: 1.8;
 }
 body{
-		counter-reset: number; 
+		counter-reset: number faq; 
 }
 a{
 	color: #000;
@@ -1586,7 +1586,7 @@ background: #fff;
 	background: #e5e5e5;
 	text-align: center;
 	padding: 2rem 5rem;
-	font-size: 1.8rem;
+	font-size: 1.5rem;
 }
 .voice_blog .box03{
 	display: flex;
@@ -1641,16 +1641,17 @@ background: #fff;
 .voice_blog .box05 .img{ width: 45%; }
 .voice_blog .box05 .img img{ width: 100%; }
 .voice_blog .box05 .txt{ width: 50%; padding: 1rem 0;}
-.voice_blog .box06{
+.voice_blog .box06 .item{
 	background: #e5e5e5;
 	padding: 3rem 5rem;
 }
 .voice_blog .box06 h2{
 	font-size: 2rem;
-	margin:0 0 2rem
+	margin:0 0 2rem;
 }
 .voice_blog .box07{
 	margin: 5rem 0 7rem;
+	padding: 0 2rem;
 }
 .voice_blog .box07 h2{
 	font-size: 2rem;
@@ -1717,3 +1718,72 @@ background: #fff;
 	transform: translate(-50%,-50%);
 } 
 /* ▲▲▲▲▲▲▲▲▲▲▲▲▲▲ ボイスブログ01 ▲▲▲▲▲▲▲▲▲▲▲▲▲▲ */
+
+/* ▼▼▼▼▼▼▼▼▼▼▼▼▼▼ FAQ01 ▼▼▼▼▼▼▼▼▼▼▼▼▼▼ */
+.faq01 .box{
+	margin: 3rem auto;
+	width: 80%;
+	background: #efefef;
+	padding: 3rem;
+}
+.faq01 .box .ques{
+	position: relative;
+}
+.faq01 .box .ques span{
+	font-size: 1.5rem;
+	position: absolute;
+	top:0;
+	right:0;
+	transition: .3s;
+}
+.faq01 .box .ques span.active{
+	transform: rotate(-45deg);
+}
+.faq01 .box h3{
+	font-size: 1.1rem;
+	font-weight: normal;
+	padding: 0 5rem 0 3rem;
+	cursor: pointer;
+}
+.faq01 .box h3::before{
+font-size: 1.6rem;
+	counter-increment: faq 1; 
+	content: 'Q'counter(faq);
+	margin-right: 1rem;
+	margin-left: -3rem;
+	font-family: 'Inter', sans-serif;
+	font-weight: 900;
+}
+.faq01 .box .ans{
+	display: none;
+	padding: 2rem 1rem 0;
+}
+/* ▲▲▲▲▲▲▲▲▲▲▲▲▲▲ FAQ01 ▲▲▲▲▲▲▲▲▲▲▲▲▲▲ */
+
+/* ▼▼▼▼▼▼▼▼▼▼▼▼▼▼ exp01 ▼▼▼▼▼▼▼▼▼▼▼▼▼▼ */
+.exp01 .txt{
+	padding-bottom: 5rem;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-end;
+}
+.exp01 h2{
+	font-style: italic;
+	white-space: nowrap;
+	font-size: 3.5rem;
+	margin: 5rem 0;
+	line-height: 1.8;
+}
+.exp01 .txt p{
+	padding: 0 0 0 5rem;
+}
+.exp01 .txt ul{
+	margin: 0 0 0 5rem;
+}
+.exp01 .txt ul li{
+	font-size: 1.3rem;
+	font-weight: bold;
+	list-style: disc;
+	margin:01rem 0;
+}
+/* ▲▲▲▲▲▲▲▲▲▲▲▲▲▲ exp01 ▲▲▲▲▲▲▲▲▲▲▲▲▲▲ */
