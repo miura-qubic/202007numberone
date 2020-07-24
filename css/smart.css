@@ -361,8 +361,6 @@ footer .copy{
 	line-height: 1.8;
 	text-shadow: 1px 1px 5px #fff;
 }
-.top01.is_show h2{
-}
 .top01 p{
 	font-size: 1.3rem;
 	line-height: 2.2;
@@ -819,15 +817,23 @@ display: flex;
 	padding:0 0 4rem;
 	background: #efefef;
 }
+.bottom_cta.exp{
+	background: #fff;
+}
 .bottom_cta .exp_link a{ margin:0 0 3rem; }
+.bottom_cta .tel_info a,
+.bottom_cta .mail_link a,
 .bottom_cta .hot_link a{
 	width: 80%;
 	max-width: 560px;
 	margin:0 auto;
 	text-align: center;
-	border: 0.35rem solid #ae2d5b;
 	padding: 0.5rem 1rem;
+	transition: .3s;
 	background: #fff;
+}
+.bottom_cta .hot_link a{
+	border: 0.35rem solid #ae2d5b;
 }
 .bottom_cta .hot_link a img{
 	width: 8rem;
@@ -837,6 +843,40 @@ display: flex;
 	color: #ae2d5b;
 	font-size: 0.7rem;
 	margin: 0.5rem 0 0;
+}
+.bottom_cta h2{
+	font-size: 1.5rem;
+	text-align:center;
+	margin: 0 0 2rem;
+}
+.bottom_cta .mail_link{
+	margin: 2rem 0;
+}
+.bottom_cta .tel_info a,
+.bottom_cta .mail_link a{
+	border: 0.35rem solid #000;
+		line-height: 1.1;
+}
+.bottom_cta .tel_info .txt01{
+	font-size: 1rem;
+}
+.bottom_cta .tel_info .txt02{
+	font-size: 2rem;
+	display: block;
+}
+.bottom_cta .tel_info .txt03{
+	font-size: 0.8rem;
+}
+.bottom_cta .mail_link a:hover{
+	background: #000;
+	color: #fff;
+}
+.bottom_cta .mail_link a .txt01{
+	font-size: 2rem;
+	display: block;
+}
+.bottom_cta .mail_link a .txt02{
+	font-size: 0.8rem;
 }
 /* ▲▲▲▲▲▲▲▲▲▲▲▲▲▲ 共通CTA ▲▲▲▲▲▲▲▲▲▲▲▲▲▲ */
 
@@ -1023,8 +1063,6 @@ transform: translateY(0);
 .service03 h2{
 	 line-height: 0.7; 
 	 transform: translateX(-2rem);
-}
-.service03 .box{
 }
 .service03 .box table{
 	text-align: center;
@@ -1410,6 +1448,79 @@ font-size: 1.2rem;
 }
 /* ▲▲▲▲▲▲▲▲▲▲▲▲▲▲ FAQ01 ▲▲▲▲▲▲▲▲▲▲▲▲▲▲ */
 
+/* ▼▼▼▼▼▼▼▼▼▼▼▼▼▼ exp01 ▼▼▼▼▼▼▼▼▼▼▼▼▼▼ */
+.exp01 .txt{
+	height: 420px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+.exp01 h2{
+	font-style: italic;
+	white-space: nowrap;
+	font-size: 1.8rem;
+}
+.top01 p{
+	text-shadow: 0px 0px 5px #fff;
+	font-size: 1.1rem;
+}
+.exp01 .txt ul{
+	margin: 0 0 0 1rem;
+}
+.exp01 .txt ul li{
+	text-shadow: 0px 0px 5px #fff;
+	font-size: 1.1rem;
+	font-weight: bold;
+	list-style: disc;
+}
+
+/* ▲▲▲▲▲▲▲▲▲▲▲▲▲▲ exp01 ▲▲▲▲▲▲▲▲▲▲▲▲▲▲ */
+
+/* ▼▼▼▼▼▼▼▼▼▼▼▼▼▼ exp02 ▼▼▼▼▼▼▼▼▼▼▼▼▼▼ */
+.exp02{ margin: 5rem 0 3rem; }
+.exp02 .box{ margin: 3rem -2rem; }
+.exp02 .box .txt{
+	background: #fff;
+	position: relative;
+	padding: 2rem 2rem;
+}
+.exp02 .box .txt h2{
+	font-size: 1.5rem;
+	margin: 0 0 1rem;
+}
+.exp02 .box .txt ul{ margin: 0 0 0 2rem; }
+.exp02 .box .txt ul li{ list-style: disc; }
+/* ▲▲▲▲▲▲▲▲▲▲▲▲▲▲ exp02 ▲▲▲▲▲▲▲▲▲▲▲▲▲▲ */
+
+/* ▼▼▼▼▼▼▼▼▼▼▼▼▼▼ exp03 ▼▼▼▼▼▼▼▼▼▼▼▼▼▼ */
+.exp03 h2{
+	text-align: center;
+	font-size: 1.8rem;
+}
+.exp03 .box .item{ 
+	background: #e4e4e4;
+	margin: 2rem 0;
+}
+.exp03 .box .item img{
+	width: 100%;
+}
+.exp03 .box .item .txt{
+	padding: 1.5rem;
+}
+.exp03 .box .item .txt h3{
+	font-size: 1.5rem;
+	margin: 0 0 0.5rem;
+}
+.exp03 .box .item .txt h3 svg{
+	margin-right: 0.5rem;
+}
+.exp03 .box .item .txt h4{
+	font-size: 1.3rem;
+	margin: 0 0 1rem;
+}
+/* ▲▲▲▲▲▲▲▲▲▲▲▲▲▲ exp03 ▲▲▲▲▲▲▲▲▲▲▲▲▲▲ */
+
+
 /* ▼▼▼▼▼▼▼▼▼▼▼▼▼▼ contact01 ▼▼▼▼▼▼▼▼▼▼▼▼▼▼ */
 .contact01{
 	margin:0 0 5rem;
@@ -1432,7 +1543,6 @@ font-size: 1.2rem;
 	margin: 1rem 0;
 }
 .contact01 .box .submit_box{
-	/* width: 200px; */
 	margin: 3rem auto 0;
 }
 .contact01 .box .submit_box input{
